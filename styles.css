@@ -1029,6 +1029,91 @@ ul, ol {
     text-align: center;
 }
 
+/* Contact Cards */
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--border-radius-xl);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+}
+
+.contact-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    box-shadow: 0 8px 20px rgba(179, 31, 31, 0.2);
+}
+
+.contact-icon i {
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+}
+
+.contact-card p {
+    font-size: 1.125rem;
+    color: var(--color-gray-700);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.contact-card a {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.contact-card a:hover {
+    color: var(--color-primary-dark);
+}
+
 .social-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
