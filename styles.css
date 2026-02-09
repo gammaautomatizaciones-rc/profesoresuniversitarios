@@ -1676,6 +1676,19 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
+    /* Header improvements for mobile */
+    .header-content {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+    
+    .logo {
+        position: relative;
+        left: 0;
+        transform: none;
+        z-index: 1;
+    }
+    
     .nav {
         display: none;
     }
@@ -1684,14 +1697,54 @@ ul, ol {
         display: block;
     }
     
+    /* Hero section improvements for mobile */
+    .hero-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    
+    .hero-logo-large {
+        flex: 0 0 200px;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .hero-logo-img {
+        max-width: 250px;
+        height: auto;
+    }
+    
+    .hero-content {
+        flex: 1;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
     .hero-title {
         font-size: 2.25rem;
+        line-height: 1.2;
     }
     
     .hero-subtitle {
         font-size: 1.125rem;
     }
     
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Section improvements */
     .section-title {
         font-size: 1.875rem;
     }

@@ -379,15 +379,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Verificar si hay imagen de logo, si no, ocultarla
     const logoImg = document.getElementById('logo-img');
-    const footerLogoImg = document.getElementById('footer-logo-img');
     
-    logoImg.onerror = function() {
-        this.style.display = 'none';
-    };
-    
-    footerLogoImg.onerror = function() {
-        this.style.display = 'none';
-    };
+    if (logoImg) {
+        logoImg.onerror = function() {
+            this.style.display = 'none';
+        };
+    }
     
     // Inicializar navegación activa
     initActiveNavigation();
