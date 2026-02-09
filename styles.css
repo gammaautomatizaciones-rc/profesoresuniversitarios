@@ -108,21 +108,23 @@ ul, ol {
    ============================================ */
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 10px;
+    left: 10px;
+    right: 10px;
     z-index: 1000;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(179, 31, 31, 0.1);
     transition: all var(--transition-normal);
+    border-radius: var(--border-radius-lg);
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 90px;
+    padding: 0 1rem;
 }
 
 .logo {
