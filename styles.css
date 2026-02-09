@@ -1037,8 +1037,8 @@ ul, ol {
     margin-bottom: 3rem;
 }
 
-/* Responsive para móviles - tarjetas una debajo de la otra */
-@media (max-width: 768px) {
+/* Responsive para tablets y móviles - tarjetas una debajo de la otra */
+@media (max-width: 1024px) {
     .contact-cards {
         grid-template-columns: 1fr;
     }
