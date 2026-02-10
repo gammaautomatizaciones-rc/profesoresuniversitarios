@@ -1417,7 +1417,7 @@ ul, ol {
     z-index: 2000;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     backdrop-filter: blur(10px);
     animation: modalBackdropIn 0.3s ease-out;
 }
@@ -1442,7 +1442,7 @@ ul, ol {
     border-radius: var(--border-radius-xl);
     max-width: 1200px;
     width: 100%;
-    max-height: 85vh;
+    max-height: 90vh;
     overflow: hidden;
     box-shadow: var(--shadow-xl);
     border: 1px solid rgba(179, 31, 31, 0.1);
@@ -1467,7 +1467,7 @@ ul, ol {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 1.5rem;
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
     color: var(--color-white);
     position: relative;
@@ -1485,22 +1485,23 @@ ul, ol {
 }
 
 .modal-header-profesional h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.025em;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
 }
 
 .modal-close-profesional {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-white);
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     transition: all var(--transition-normal);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
@@ -1514,9 +1515,9 @@ ul, ol {
 }
 
 .modal-body-profesional {
-    padding: 2.5rem;
+    padding: 2rem;
     overflow-y: auto;
-    max-height: calc(85vh - 120px);
+    max-height: calc(90vh - 100px);
     scrollbar-width: thin;
     scrollbar-color: var(--color-gray-300) var(--color-gray-100);
     display: grid;
@@ -1612,9 +1613,9 @@ ul, ol {
 
 .modal-section li {
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     color: var(--color-gray-700);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all var(--transition-fast);
 }
@@ -1652,8 +1653,8 @@ ul, ol {
 .two-column-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .two-column-list ul {
@@ -1664,9 +1665,9 @@ ul, ol {
 
 .two-column-list li {
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     color: var(--color-gray-700);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all var(--transition-fast);
 }
@@ -1737,14 +1738,142 @@ ul, ol {
 }
 
 /* Responsive para móviles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modal-body-profesional {
         grid-template-columns: 1fr;
         padding: 1.5rem;
+        max-height: calc(90vh - 100px);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
     
     .modal-cta {
         grid-column: 1;
+        margin-top: 0;
+        padding: 1.5rem;
+        align-self: stretch;
+        order: 2;
+    }
+    
+    /* Aseguramos que los temas estén arriba */
+    .modal-section {
+        order: 1;
+    }
+    
+    .modal-header-profesional {
+        padding: 1rem 1.25rem;
+    }
+    
+    .modal-header-profesional h3 {
+        font-size: 1.25rem;
+    }
+    
+    .modal-close-profesional {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .modal-section {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .modal-section h4 {
+        font-size: 1.125rem;
+        gap: 0.5rem;
+    }
+    
+    .modal-section h4 i {
+        width: 35px;
+        height: 35px;
+        font-size: 1.25rem;
+    }
+    
+    .modal-section li {
+        padding: 0.625rem 0;
+        font-size: 0.875rem;
+    }
+    
+    .two-column-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .two-column-list li {
+        padding: 0.625rem 0;
+        font-size: 0.875rem;
+    }
+    
+    .modal-cta p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-cta .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Full-screen modal on very small screens */
+    @media (max-width: 480px) {
+        .modal-profesional {
+            padding: 0.5rem;
+        }
+        
+        .modal-content-profesional {
+            max-height: 95vh;
+            border-radius: var(--border-radius-lg);
+        }
+        
+        .modal-header-profesional {
+            padding: 0.75rem 1rem;
+        }
+        
+        .modal-header-profesional h3 {
+            font-size: 1.125rem;
+        }
+        
+        .modal-body-profesional {
+            padding: 1rem;
+            max-height: calc(95vh - 80px);
+        }
+        
+        .modal-section {
+            padding: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .modal-section h4 {
+            font-size: 1rem;
+        }
+        
+        .modal-section h4 i {
+            width: 30px;
+            height: 30px;
+            font-size: 1.125rem;
+        }
+        
+        .modal-section li {
+            padding: 0.5rem 0;
+            font-size: 0.8125rem;
+        }
+        
+        .modal-cta {
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+        
+        .modal-cta p {
+            font-size: 0.875rem;
+        }
+        
+        .modal-cta .btn {
+            padding: 0.875rem 1.5rem;
+            font-size: 0.875rem;
+        }
     }
 }
 
